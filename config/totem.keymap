@@ -69,7 +69,7 @@
         kill: kill {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kt LEFT_SHIFT &kp END &kp LC(X) &kt LEFT_SHIFT>;
+            bindings = <&kt LEFT_SHIFT &kp END &kt LEFT_SHIFT &kp BACKSPACE>;
             label = "KILL";
         };
     };
