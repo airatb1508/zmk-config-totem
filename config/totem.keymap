@@ -130,7 +130,7 @@
             bindings = <
         &trans                &kill      &kp END    &trans     &trans            &kp LC(V)  &trans          &trans      &trans  &kp UP
         &kp HOME              &trans     &kp DEL    &kp RIGHT  &kt LEFT_SHIFT    &trans     &trans          &kill_line  &trans  &trans
-&trans  &mt LEFT_SHIFT LC(Z)  &kp LC(X)  &kp LC(C)  &kp LC(V)  &kp LEFT          &kp DOWN   &kp HOME        &trans      &trans  &kp LC(Z)  &trans
+&trans  &mt LEFT_SHIFT LC(Z)  &kp LC(X)  &kp LC(C)  &kp LC(V)  &kp LEFT          &kp DOWN   &kp HOME        &trans      &trans  &kp LC(Z)  &kp LC(ENTER)
                                          &trans     &trans     &trans            &trans     &kt LEFT_SHIFT  &trans
             >;
         };
