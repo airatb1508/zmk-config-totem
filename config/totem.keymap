@@ -143,7 +143,7 @@
             bindings = <
         &trans    &trans  &kp END  &trans     &trans         &trans            &trans            &kp LS(LA(N5))  &trans             &kp UP
         &kp HOME  &trans  &trans   &kp RIGHT  &trans         &kp LA(LC(LEFT))  &kp LA(LC(DOWN))  &kp LA(LC(UP))  &kp LA(LC(RIGHT))  &trans
-&trans  &trans    &trans  &trans   &trans     &kp LEFT       &kp DOWN          &trans            &trans          &trans             &kp BACKSLASH  &sl 1
+&trans  &trans    &trans  &trans   &trans     &kp LEFT       &kp DOWN          &trans            &trans          &trans             &kp BACKSLASH  &tog 1
                           &trans   &trans     &lt 6 SPACE    &trans            &trans            &trans
             >;
         };
