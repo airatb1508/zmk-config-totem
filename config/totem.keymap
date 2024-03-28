@@ -115,7 +115,7 @@
         emacs-c {
             bindings = <
         &trans                &trans     &kp END    &trans     &trans        &kp LC(Y)  &trans    &trans  &trans  &kp UP
-        &kp HOME              &trans     &trans     &kp RIGHT  &kp ESCAPE    &trans     &trans    &kill   &trans  &trans
+        &kp HOME              &trans     &kp DEL    &kp RIGHT  &kp ESCAPE    &trans     &trans    &kill   &trans  &trans
 &trans  &mt LEFT_SHIFT LC(Z)  &kp LC(X)  &kp LC(C)  &kp LC(V)  &kp LEFT      &kp DOWN   &kp HOME  &trans  &trans  &trans  &trans
                                          &trans     &trans     &trans        &trans     &trans    &trans
             >;
@@ -142,7 +142,7 @@
         nav {
             bindings = <
         &trans    &trans  &kp END  &trans     &trans         &trans            &trans            &kp LS(LA(N5))  &trans             &kp UP
-        &kp HOME  &trans  &trans   &kp RIGHT  &trans         &kp LA(LC(LEFT))  &kp LA(LC(DOWN))  &kp LA(LC(UP))  &kp LA(LC(RIGHT))  &trans
+        &kp HOME  &trans  &kp DEL  &kp RIGHT  &trans         &kp LA(LC(LEFT))  &kp LA(LC(DOWN))  &kp LA(LC(UP))  &kp LA(LC(RIGHT))  &trans
 &trans  &trans    &trans  &trans   &trans     &kp LEFT       &kp DOWN          &trans            &trans          &trans             &kp BACKSLASH  &tog 1
                           &trans   &trans     &lt 6 SPACE    &trans            &trans            &trans
             >;
