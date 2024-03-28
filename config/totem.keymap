@@ -37,6 +37,16 @@
             key-positions = <0 1>;
             bindings = <&kp ESC>;
         };
+
+        combo_enter {
+            bindings = <&kp ENTER>;
+            key-positions = <19 18>;
+        };
+
+        combo_tab {
+            bindings = <&kp TAB>;
+            key-positions = <10 11>;
+        };
     };
 
     macros {
@@ -79,8 +89,8 @@
 
             bindings = <
                &kp Q             &kp W  &kp E         &kp R         &kp T        &kp Y            &kp U        &kp I      &kp O    &kp P
-               &kp A             &kp S  &kp D         &kp F         &kp G        &kp H            &kp J        &kp K      &kp L    &kp SEMICOLON
-&mt LCTRL TAB  &mt LEFT_SHIFT Z  &kp X  &kp C         &kp V         &kp B        &kp N            &kp M        &kp COMMA  &kp DOT  &mt RIGHT_SHIFT SLASH  &kp ENTER
+               &mt LCTRL A       &kp S  &kp D         &kp F         &kp G        &kp H            &kp J        &kp K      &kp L    &mt RCTRL SEMI
+&mt LCTRL TAB  &mt LEFT_SHIFT Z  &kp X  &kp C         &kp V         &kp B        &kp N            &kp M        &kp COMMA  &kp DOT  &mt RIGHT_SHIFT SLASH  &mt RCTRL ENTER
                                         &kp LEFT_GUI  &kp LEFT_ALT  &kp SPACE    &lt 1 BACKSPACE  &lt 2 SPACE  &trans
             >;
         };
@@ -93,19 +103,19 @@
 
         num {
             bindings = <
-                 &kp UNDER          &kp F2  &kp F3        &kp F4        &kp PLUS       &kp MINUS  &kp EQUAL  &kp GRAVE  &kp LEFT_BRACKET      &kp RIGHT_BRACKET
-                 &kp EXCL           &kp AT  &kp HASH      &kp DOLLAR    &kp PERCENT    &kp CARET  &kp AMPS   &kp STAR   &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS
-&mt LCTRL TILDE  &mt LEFT_SHIFT N1  &kp N2  &kp N3        &kp N4        &kp N5         &kp N6     &kp N7     &kp N8     &kp N9                &mt RIGHT_SHIFT N0     &kp SINGLE_QUOTE
-                                            &kp LEFT_GUI  &kp LEFT_ALT  &kp SPACE      &trans     &trans     &trans
+                 &kp UNDER          &kp F2  &kp F3    &kp F4      &kp PLUS       &kp MINUS  &kp EQUAL  &kp GRAVE  &kp LEFT_BRACKET      &kp RIGHT_BRACKET
+                 &kp EXCL           &kp AT  &kp HASH  &kp DOLLAR  &kp PERCENT    &kp CARET  &kp AMPS   &kp STAR   &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS
+&mt LCTRL TILDE  &mt LEFT_SHIFT N1  &kp N2  &kp N3    &kp N4      &kp N5         &kp N6     &kp N7     &kp N8     &kp N9                &mt RIGHT_SHIFT N0     &kp SINGLE_QUOTE
+                                            &trans    &trans      &trans         &trans     &trans     &trans
             >;
         };
 
         nav {
             bindings = <
-        &trans    &trans  &trans  &trans     &trans         &trans    &trans  &kp LS(LA(N5))  &trans  &kp UP
-        &kp HOME  &trans  &trans  &kp RIGHT  &trans         &trans    &trans  &trans          &trans  &trans
-&trans  &trans    &trans  &trans  &trans     &kp LEFT       &kp DOWN  &trans  &trans          &trans  &kp BACKSLASH  &trans
-                          &trans  &trans     &lt 3 SPACE    &trans    &trans  &trans
+        &trans    &trans  &trans  &trans     &trans         &trans            &trans            &kp LS(LA(N5))  &trans             &kp UP
+        &kp HOME  &trans  &trans  &kp RIGHT  &trans         &kp LA(LC(LEFT))  &kp LA(LC(DOWN))  &kp LA(LC(UP))  &kp LA(LC(RIGHT))  &trans
+&trans  &trans    &trans  &trans  &trans     &kp LEFT       &kp DOWN          &trans            &trans          &trans             &kp BACKSLASH  &trans
+                          &trans  &trans     &lt 3 SPACE    &trans            &trans            &trans
             >;
         };
 
