@@ -66,10 +66,24 @@
                 <&kp G &kp I &kp F>;
         };
 
-        kill: kill {
+        kill_line: kill_line {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kt LEFT_SHIFT &kp END &kt LEFT_SHIFT &kp DEL>;
+            label = "KILL_LINE";
+        };
+
+        copy: copy {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kt LEFT_SHIFT &kp LC(C)>;
+            label = "COPY";
+        };
+
+        kill: kill {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kt LEFT_SHIFT &kp LC(X)>;
             label = "KILL";
         };
     };
@@ -114,16 +128,16 @@
 
         emacs-c {
             bindings = <
-        &trans                &trans     &kp END    &trans     &trans        &kp LC(Y)  &trans    &trans  &trans  &kp UP
-        &kp HOME              &trans     &kp DEL    &kp RIGHT  &kp ESCAPE    &trans     &trans    &kill   &trans  &trans
-&trans  &mt LEFT_SHIFT LC(Z)  &kp LC(X)  &kp LC(C)  &kp LC(V)  &kp LEFT      &kp DOWN   &kp HOME  &trans  &trans  &trans  &trans
-                                         &trans     &trans     &trans        &trans     &trans    &trans
+        &trans                &kill      &kp END    &trans     &trans            &kp LC(V)  &trans          &trans      &trans  &kp UP
+        &kp HOME              &trans     &kp DEL    &kp RIGHT  &kt LEFT_SHIFT    &trans     &trans          &kill_line  &trans  &trans
+&trans  &mt LEFT_SHIFT LC(Z)  &kp LC(X)  &kp LC(C)  &kp LC(V)  &kp LEFT          &kp DOWN   &kp HOME        &trans      &trans  &kp LC(Z)  &trans
+                                         &trans     &trans     &trans            &trans     &kt LEFT_SHIFT  &trans
             >;
         };
 
         emacs-m {
             bindings = <
-        &trans  &trans  &trans  &trans         &trans          &trans  &trans  &trans  &trans  &trans
+        &trans  &copy   &trans  &trans         &trans          &trans  &trans  &trans  &trans  &trans
         &trans  &trans  &trans  &kp LC(RIGHT)  &trans          &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans         &kp LC(LEFT)    &trans  &trans  &trans  &trans  &trans  &trans
                         &trans  &trans         &trans          &trans  &trans  &trans
