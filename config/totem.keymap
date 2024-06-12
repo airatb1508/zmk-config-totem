@@ -56,21 +56,6 @@
     };
 
     macros {
-        gif: gif {
-            label = "giphy";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LSHFT>,
-                <&macro_tap>,
-                <&kp N2>,
-                <&macro_release>,
-                <&kp LSHFT>,
-                <&macro_tap>,
-                <&kp G &kp I &kp F>;
-        };
-
         kill_line: kill_line {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -115,10 +100,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-               &kp Q             &kp W  &kp E         &kp R         &kp T        &kp Y            &kp U        &kp I      &kp O    &kp P
-               &mt LCTRL A       &kp S  &kp D         &kp F         &kp G        &kp H            &kp J        &kp K      &kp L    &mt RCTRL SEMI
-&mt LCTRL TAB  &mt LEFT_SHIFT Z  &kp X  &kp C         &kp V         &kp B        &kp N            &kp M        &kp COMMA  &kp DOT  &mt RIGHT_SHIFT SLASH  &mt RCTRL ENTER
-                                        &kp LEFT_GUI  &kp LEFT_ALT  &kp SPACE    &lt 4 BACKSPACE  &lt 5 SPACE  &trans
+               &kp Q             &kp W  &kp E         &kp R         &kp T      &kp Y            &kp U        &kp I      &kp O    &kp P
+               &mt LCTRL A       &kp S  &kp D         &kp F         &kp G      &kp H            &kp J        &kp K      &kp L    &mt RCTRL SEMI
+&mt LCTRL TAB  &mt LEFT_SHIFT Z  &kp X  &kp C         &kp V         &kp B      &kp N            &kp M        &kp COMMA  &kp DOT  &mt RIGHT_SHIFT SLASH  &mt RCTRL ENTER
+                                        &kp LEFT_GUI  &kp LEFT_ALT  &kp TAB    &lt 4 BACKSPACE  &lt 5 SPACE  &kp ENTER
             >;
         };
 
