@@ -26,7 +26,7 @@
     quick-tap-ms = <100>;
     global-quick-tap;
     flavor = "tap-preferred";
-    tapping-term-ms = <170>;
+    tapping-term-ms = <220>;
 };
 
 / {
@@ -39,33 +39,23 @@
             bindings = <&kp ESC>;
         };
 
-        combo_enter {
-            bindings = <&kp ENTER>;
+        quote {
+            bindings = <&kp SINGLE_QUOTE>;
             key-positions = <19 18>;
         };
 
-        combo_tab {
-            bindings = <&kp TAB>;
-            key-positions = <10 11>;
+        bkt {
+            bindings = <&kp LEFT_BRACKET>;
+            key-positions = <9 8>;
+        };
+
+        bslh {
+            bindings = <&kp BACKSLASH>;
+            key-positions = <30 29>;
         };
     };
 
     macros {
-        gif: gif {
-            label = "giphy";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LSHFT>,
-                <&macro_tap>,
-                <&kp N2>,
-                <&macro_release>,
-                <&kp LSHFT>,
-                <&macro_tap>,
-                <&kp G &kp I &kp F>;
-        };
-
         kill_line: kill_line {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -110,10 +100,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-               &kp Q             &kp W  &kp E         &kp R         &kp T        &kp Y            &kp U        &kp I      &kp O    &kp P
-               &mt LCTRL A       &kp S  &kp D         &kp F         &kp G        &kp H            &kp J        &kp K      &kp L    &mt RCTRL SEMI
-&mt LCTRL TAB  &mt LEFT_SHIFT Z  &kp X  &kp C         &kp V         &kp B        &kp N            &kp M        &kp COMMA  &kp DOT  &mt RIGHT_SHIFT SLASH  &mt RCTRL ENTER
-                                        &kp LEFT_GUI  &kp LEFT_ALT  &kp SPACE    &lt 4 BACKSPACE  &lt 5 SPACE  &trans
+               &kp Q             &kp W  &kp E         &kp R         &kp T      &kp Y            &kp U        &kp I      &kp O    &kp P
+               &mt LCTRL A       &kp S  &kp D         &kp F         &kp G      &kp H            &kp J        &kp K      &kp L    &mt RCTRL SEMI
+&mt LCTRL TAB  &mt LEFT_SHIFT Z  &kp X  &kp C         &kp V         &kp B      &kp N            &kp M        &kp COMMA  &kp DOT  &mt RIGHT_SHIFT SLASH  &mt RCTRL ENTER
+                                        &kp LEFT_GUI  &kp LEFT_ALT  &kp TAB    &lt 4 BACKSPACE  &lt 5 SPACE  &kp ENTER
             >;
         };
 
@@ -146,10 +136,10 @@
 
         num {
             bindings = <
-                 &kp UNDER          &kp F2  &kp F3    &kp F4      &kp PLUS       &kp MINUS  &kp EQUAL  &kp GRAVE  &kp LEFT_BRACKET      &kp RIGHT_BRACKET
-                 &mt LCTRL EXCL     &kp AT  &kp HASH  &kp DOLLAR  &kp PERCENT    &kp CARET  &kp AMPS   &kp STAR   &kp LEFT_PARENTHESIS  &mt RCTRL RIGHT_PARENTHESIS
-&mt LCTRL TILDE  &mt LEFT_SHIFT N1  &kp N2  &kp N3    &kp N4      &kp N5         &kp N6     &kp N7     &kp N8     &kp N9                &mt RIGHT_SHIFT N0           &kp SINGLE_QUOTE
-                                            &trans    &trans      &trans         &trans     &trans     &trans
+                 &kp UNDER          &kp TILDE  &kp F3    &kp F4      &kp PLUS       &kp MINUS  &kp EQUAL  &kp GRAVE  &kp LEFT_BRACKET      &kp RIGHT_BRACKET
+                 &mt LCTRL EXCL     &kp AT     &kp HASH  &kp DOLLAR  &kp PERCENT    &kp CARET  &kp AMPS   &kp STAR   &kp LEFT_PARENTHESIS  &mt RCTRL RIGHT_PARENTHESIS
+&mt LCTRL TILDE  &mt LEFT_SHIFT N1  &kp N2     &kp N3    &kp N4      &kp N5         &kp N6     &kp N7     &kp N8     &kp N9                &mt RIGHT_SHIFT N0           &kp SINGLE_QUOTE
+                                               &trans    &trans      &trans         &trans     &trans     &trans
             >;
         };
 
