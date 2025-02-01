@@ -111,7 +111,7 @@
             bindings = <
                  &kp UNDER          &kp TILDE  &kp F3    &kp F4      &kp PLUS       &kp MINUS  &kp EQUAL  &kp GRAVE  &kp LEFT_BRACKET      &kp RIGHT_BRACKET
                  &mt LCTRL EXCL     &kp AT     &kp HASH  &kp DOLLAR  &kp PERCENT    &kp CARET  &kp AMPS   &kp STAR   &kp LEFT_PARENTHESIS  &mt RCTRL RIGHT_PARENTHESIS
-&mt LCTRL TILDE  &mt LEFT_SHIFT N1  &kp N2     &kp N3    &kp N4      &kp N5         &kp N6     &kp N7     &kp N8     &kp N9                &mt RIGHT_SHIFT N0           &kp SINGLE_QUOTE
+&mt LCTRL TILDE  &mt LEFT_SHIFT N1  &kp N2     &kp N3    &kp N4      &kp N5         &kp N6     &kp N7     &kp N8     &kp N9                &mt RIGHT_SHIFT N0           &tog 4
                                                &trans    &trans      &trans         &trans     &trans     &trans
             >;
         };
